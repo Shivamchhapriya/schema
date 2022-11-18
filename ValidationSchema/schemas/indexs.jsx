@@ -20,7 +20,8 @@
     termsAndConditions: Yup.boolean()
     .required('You need to accept the terms and conditions')
     .oneOf([true]),
-    
+      Googlemapurl : Yup.string().matches(/((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,'Enter correct url!').required('Please enter website'),
+
     
     inlineRadioOptions: Yup.boolean().required().oneOf([0 , 1]),
  }); 
